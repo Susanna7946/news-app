@@ -1,0 +1,14 @@
+<div class="tabs-wrapper">
+  <a
+    *ngFor="let tab of tabs"
+    class="tab"
+    [routerLink]="tab.url"
+    routerLinkActive
+    #rla="routerLinkActive"
+    [class.active]="rla.isActive"
+  >
+    {{ tab.title }}
+  </a>
+</div>
+
+<router-outlet></router-outlet>

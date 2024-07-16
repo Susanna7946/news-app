@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .news-wrapper {
+    border-bottom: 1px solid #595959;
+
+    .title {
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration-line: underline;
+      }
+    }
+
+    .news-info-wrapper {
+      display: flex;
+      gap: 12px;
+      color: #595959;
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<input type="text" placeholder="Stock ticker" matInput [formControl]="stockTickerControl" [matAutocomplete]="auto">
+<mat-autocomplete #auto="matAutocomplete" (optionSelected)="onSelect($event)"  [displayWith]="displayFn">
+  <mat-option *ngFor="let stockTicker of filteredOptions | async" [value]="stockTicker">
+    <div class="stock-ticker">
+      <p>{{stockTicker.symbol}}</p>
+      <p>{{stockTicker.name}}</p>
+    </div>
+  </mat-option>
+</mat-autocomplete>
+

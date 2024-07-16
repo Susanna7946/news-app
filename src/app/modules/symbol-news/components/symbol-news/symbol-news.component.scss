@@ -1,0 +1,61 @@
+:host {
+  height: 100%;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .add-symbol-wrapper {
+    display: flex;
+    justify-content: end;
+
+    .add-symbol {
+      border-radius: 20px;
+      border: 1px solid white;
+      padding: 8px 12px;
+      background: #222;
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        background: black;
+      }
+
+      .icon {
+        font-size: 16px;
+        color: white;
+      }
+    }
+  }
+
+  .filtered-value {
+    height: 30px;
+    color: white;
+    font-size: 20px;
+  }
+
+  .hide {
+    visibility: hidden;
+  }
+
+  .search-wrapper {
+    input {
+      background: #222;
+      border: 1px solid #595959;
+      border-radius: 4px;
+      padding: 10px 20px;
+      width: 300px;
+      color: white;
+    }
+  }
+
+  .stock-ticker-items {
+    display: flex;
+    gap: 8px;
+  }
+
+  .no-news {
+    color: white;
+    font-size: 18px;
+  }
+}

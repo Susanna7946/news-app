@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <news-list
+    *ngIf="newsList.length; else noNews"
+    [newsList]="newsList"
+  ></news-list>
+  <ng-template #noNews>
+    <p class="no-news">No news</p>
+  </ng-template>
+</div>

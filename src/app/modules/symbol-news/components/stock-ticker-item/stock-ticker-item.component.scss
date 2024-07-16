@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 4px;
+  padding: 6px 8px;
+  width: auto;
+  background: #595959;
+  color: white;
+
+  .icon-button {
+    width: 24px;
+    height: 24px;
+    line-height: 22px;
+
+    .icon {
+      font-size: 18px;
+    }
+  }
+}
+
+.selected {
+  border: 1px solid white;
+}
+

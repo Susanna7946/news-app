@@ -1,0 +1,50 @@
+:host {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 600px;
+  margin: auto;
+  padding: 50px 0;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .title {
+      color: white;
+      font-size: 20px;
+    }
+
+    .new-info-wrapper {
+      display: flex;
+      gap: 12px;
+      color: #595959;
+      font-size: 12px;
+    }
+  }
+
+  .news-image-wrapper {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 70%;
+    }
+  }
+
+  .news-text {
+    color: white;
+  }
+
+  .raed-more {
+    color: #80bd94;
+    text-decoration: none;
+  }
+
+  .article-not-found {
+    color: white;
+    font-size: 18px;
+  }
+}

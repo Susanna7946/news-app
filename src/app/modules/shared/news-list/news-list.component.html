@@ -1,0 +1,17 @@
+  <div
+    *ngFor="let new of newsList"
+    class="news-wrapper"
+  >
+    <a
+      class="title"
+      [routerLink]="['news-article', new.slug]"
+      [relativeTo]="null"
+    >
+      {{new.title | uppercase}}
+    </a>
+    <div class="news-info-wrapper">
+      <p>{{new.date}}</p>
+      <div class="line">|</div>
+      <p *ngFor="let ticker of new.tickers">{{ticker}}</p>
+    </div>
+  </div>

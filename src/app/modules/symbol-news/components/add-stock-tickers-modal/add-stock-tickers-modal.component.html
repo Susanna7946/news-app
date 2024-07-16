@@ -1,0 +1,38 @@
+<div class="wrapper">
+  <div class="header">
+    <p class="title">Add stock ticker</p>
+    <button
+      class="icon-button"
+      mat-icon-button
+      (click)="close($event)"
+    >
+      <mat-icon class="icon">close</mat-icon>
+    </button>
+  </div>
+  <div class="body">
+    <stock-ticker-autocomplete
+      [allStockTickersList]="allStockTickers"
+      (onChosenStockTicker)="addStockTicker($event)"
+    ></stock-ticker-autocomplete>
+    <div class="stock-ticker-items">
+      <stock-ticker-item
+        *ngFor="let item of chosenStockTickersList"
+        [name]="item.symbol"
+        (remove)="removeStockTicker(item)"
+      ></stock-ticker-item>
+    </div>
+  </div>
+  <div class="footer">
+    <button
+      (click)="close($event)"
+    >
+      Cancel
+    </button>
+    <button
+      class="focused"
+      (click)="close($event,true)"
+    >
+      Add tickers
+    </button>
+  </div>
+</div>

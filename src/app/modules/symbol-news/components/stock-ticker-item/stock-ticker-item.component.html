@@ -1,0 +1,14 @@
+<div
+  class="wrapper"
+  [class.selected]="isSelected"
+  (click)="selectItem.emit(isSelected = !isSelected)"
+>
+  {{name}}
+  <button
+    mat-icon-button
+    class="icon-button"
+    (click)="remove.emit()"
+  >
+    <mat-icon class="icon">close</mat-icon>
+  </button>
+</div>

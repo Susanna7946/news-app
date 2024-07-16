@@ -1,0 +1,25 @@
+<ng-container *ngIf="newsArticle; else articleNotFound">
+  <div class="header">
+    <a class="title">{{newsArticle.title | uppercase}}</a>
+    <div class="new-info-wrapper">
+      <p>{{newsArticle.date}}</p>
+      <div class="line">|</div>
+      <p *ngFor="let ticker of newsArticle.tickers">{{ticker}}</p>
+    </div>
+  </div>
+  <div class="news-image-wrapper">
+    <img alt="news image" [src]="newsArticle.image_url"/>
+  </div>
+  <p class="news-text">{{newsArticle.text}}</p>
+  <a
+    class="raed-more"
+    target="_blank"
+    [href]="newsArticle.news_url"
+  >
+    Read the full article ->
+  </a>
+</ng-container>
+<ng-template #articleNotFound>
+  <p class="article-not-found"> Article not found</p>
+</ng-template>
+

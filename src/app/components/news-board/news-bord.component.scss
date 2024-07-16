@@ -1,0 +1,22 @@
+.tabs-wrapper {
+  margin: 30px;
+
+  :first-child {
+    border-radius: 10px 0 0 10px;
+  }
+
+  :last-child {
+    border-radius: 0 10px 10px 0;
+  }
+
+  .tab {
+    padding: 10px 12px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #595959;
+  }
+
+  .active {
+    background: #595959;
+  }
+}

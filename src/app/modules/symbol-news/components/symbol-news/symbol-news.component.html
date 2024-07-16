@@ -1,0 +1,45 @@
+<div class="add-symbol-wrapper">
+  <button
+    class="add-symbol"
+    (click)="addStockTickers()"
+  >
+    Add symbol
+  </button>
+</div>
+<div
+  *ngIf="!chosenStockTickers.size && !this.filterValue; else newsList"
+  class="search-wrapper"
+>
+  <stock-ticker-autocomplete
+    [allStockTickersList]="allStockTickersList"
+    [recentSearchList]="recentSearchTickers"
+    (onChosenStockTicker)="onSearch($event)"
+  ></stock-ticker-autocomplete>
+</div>
+<ng-template #newsList>
+  <div
+    class="filtered-value"
+    [class.hide]="!filterValue"
+  >
+    {{filterValue?.symbol}} {{filterValue?.name}}
+  </div>
+  <div class="stock-ticker-items">
+    <stock-ticker-item
+      *ngFor="let item of chosenStockTickers"
+      [name]="item.symbol"
+      [isSelected]="item.symbol === filterValue?.symbol"
+      (remove)="removeStockTicker(item)"
+      (selectItem)="selectItem($event, item)"
+    ></stock-ticker-item>
+  </div>
+  <news-list
+    *ngIf="filteredNews.length; else noNews"
+    [newsList]="filteredNews"
+  ></news-list>
+  <ng-template #noNews>
+    <p class="no-news">
+      {{filterValue ? 'No news about this stock ticker' : 'Choose stock ticker symbol'}}
+    </p>
+  </ng-template>
+</ng-template>
+

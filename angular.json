@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -96,6 +97,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -103,5 +105,23 @@
         }
       }
     }
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "prefix": "",
+      "style": "scss",
+      "skipTests": true
+    },
+    "@schematics/angular:directive": {
+      "prefix": "",
+      "skipTests": true
+    },
+    "@schematics/angular:service": {
+      "prefix": "",
+      "skipTests": true
+    }
+  },
+  "cli": {
+    "analytics": false
   }
 }
